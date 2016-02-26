@@ -184,9 +184,9 @@
 
 					children.removeClass('active');
 					$(this).closest('.' + options.className + '-timeblock').addClass('active');
-
-					_updateTimelinePos('click');
 				}
+
+				_updateTimelinePos('click');
 
 				return false;
 			});
