@@ -6,6 +6,8 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
+var uglify = require('gulp-uglify');
+
 
 gulp.task('css', function() {
 
@@ -25,4 +27,21 @@ gulp.task('css', function() {
 
 });
 
-gulp.task('default', ['css']);
+gulp.task('js', function() {
+
+	return gulp.src(['src/*.js'])
+		.pipe(watch('src/*.js', {
+			ignoreInitial: false,
+			verbose: true
+		}))
+		.pipe(plumber())
+		.pipe(gulp.dest('dist/'))
+		.pipe(uglify())
+		.pipe(rename(function (path) {
+			path.basename += '.min';
+		}))
+		.pipe(gulp.dest('dist/'));
+
+});
+
+gulp.task('default', ['css', 'js']);
