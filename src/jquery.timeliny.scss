@@ -16,7 +16,7 @@ $timeliny_font: normal normal 400 1rem/1 'Montserrat', Arial, sans-serif;
 $timeliny_spacings: 5rem;
 $timeliny_transition-time: 0.35s;
 $timeliny_vertical-line-pos: 32%;
-$timeliny_small-breakdown: map-get($breakpoints, medium);
+$timeliny_small-breakdown: 768px;
 
 
 /**
