@@ -45,7 +45,31 @@ $('#example1').timeliny();
 
 ### Sass Settings
 
-// TODO
+If you want to use Sass, simply import the file from `jquery.timeliny.scss` in your project.
+
+You can configure the plugin by editing the settings at the top of the file.
+
+```css
+/**
+ * Settings
+**/
+
+$timeliny_classname: 'timeliny';
+
+$timeliny_base-color: #ddd;
+$timeliny_active-color: #37404A;
+$timeliny_text-color: #000;
+
+$timeliny_dots-radius: 0.6rem;
+$timeliny_global-width: 100%;
+$timeliny_global-margin: 0 auto 4rem;
+$timeliny_max-inner-width: 1024px;
+$timeliny_font: normal normal 400 1rem/1 'Montserrat', Arial, sans-serif;
+$timeliny_spacings: 5rem;
+$timeliny_transition-time: 0.35s;
+$timeliny_vertical-line-pos: 32%;
+$timeliny_small-breakdown: 768px;
+```
 
 
 ##Contributing
