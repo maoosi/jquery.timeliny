@@ -2,23 +2,22 @@
 <html class="no-js" lang="en">
 <head>
 
-    <title>jquery.timeliny.js - Responsive jQuery plugin for creating year-based interactive timelines.</title>
-
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Timeliny is a responsive jQuery plugin for creating year-based interactive timelines.">
 
-    <!-- Hosted libraries -->
+	<!-- Title -->
+	<title>jquery.timeliny.js - Responsive jQuery plugin for creating year-based interactive timelines.</title>
+
+    <!-- Vendors CSS -->
     <link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/monokai_sublime.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 
-    <!-- Plugin jquery.graduation-bar -->
-    <script src="../src/jquery.timeliny.js"></script>
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../dist/jquery.timeliny.min.css" />
 
+	<!-- Page CSS -->
     <style type="text/css">
         html, body {
             background-color: #fff;
@@ -40,7 +39,7 @@
             display: block;
             width: 100%;
             padding: 50px 0px;
-            background-color: #10BD73;
+            background-color: #37404A;
             color: #fff;
             margin-bottom: 80px;
             text-align: center;
@@ -92,24 +91,22 @@
 </head>
 <body>
 
+	<!-- Header -->
     <div class="header">
-
         <div class="container">
-
             <h1>Timeliny - jQuery plugin</h1>
             <p class="subtitle">
                 Timeliny is a responsive jQuery plugin for creating year-based interactive timelines.
             </p>
             <br /><br />
 			<div class="github">
-                <iframe src="https://ghbtns.com/github-btn.html?user=maoosi&repo=jquery.graduation-bar&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-                <iframe src="https://ghbtns.com/github-btn.html?user=maoosi&repo=jquery.graduation-bar&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=maoosi&repo=jquery.timeliny&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=maoosi&repo=jquery.timeliny&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
             </div>
-
         </div>
-
     </div>
 
+	<!-- Examples -->
     <div class="container">
 
         <!-- Basic example -->
@@ -117,22 +114,34 @@
             <h3>Code :</h3>
                 <pre><code class="html">&lt;!-- Html --&gt;<br>&lt;div id="example1"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div data-year="2014" class="active"&gt;Short text here&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div data-year="2011"&gt;Short text here&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div data-year="2010"&gt;Short text here&lt;/div&gt;<br>&lt;/div&gt;</code><code class="javascript">/* Javascript */<br>$('#example1').timeliny();</code></pre>
             <h3>Result :</h3>
-				<div id="example1">
+				<div id="example1" class="timeliny">
 					<div data-year="2014" class="active">Short text here</div>
 					<div data-year="2011">Short text here</div>
 					<div data-year="2010">Short text here</div>
 				</div>
-                <script>
-                    $(function() {
-                        $('#example1').timeliny();
-                    });
-                </script>
 
     </div>
 
+	<!-- Footer -->
     <div class="footer">
         <a href="https://github.com/maoosi/jquery.timeliny" target="_blank">Github</a>
     </div>
+
+
+	<!-- Vendors JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+	<!-- Plugin JS -->
+    <script src="../dist/jquery.timeliny.min.js"></script>
+
+	<!-- Basic example -->
+	<script>
+		$(function() {
+			$('#example1').timeliny();
+		});
+	</script>
 
 </body>
 </html>
