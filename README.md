@@ -18,7 +18,7 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 
 **Including files:**
 
-The following example includes files located into the dist folder. We recommend to use the minified version.
+The following example includes files located into the dist folder. Using the minified files is recommended.
 
 ```html
 <!-- Before closing your <head> tag -->
@@ -171,7 +171,7 @@ $timeliny_dots-radius: 0.6rem;
 $timeliny_global-width: 100%;
 $timeliny_global-margin: 0 auto 4rem;
 $timeliny_max-inner-width: 1024px;
-$timeliny_font: normal normal 400 1rem/1 'Montserrat', Arial, sans-serif;
+$timeliny_font: normal normal 400 1rem/1 Arial, sans-serif;
 $timeliny_spacings: 5rem;
 $timeliny_transition-time: 0.35s;
 $timeliny_vertical-line-pos: 32%;
