@@ -14,8 +14,12 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 -----------
 // TODO
 
-##Basic Usage
+
+##Usage
 -----------
+
+**Create the basic html structure required. Don't forget `data-year` and to set an `active` element:**
+
 ```html
 <div id="example1">
 	<div data-year="2014" class="active">Short text here</div>
@@ -24,8 +28,32 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 </div>
 ```
 
+**Then, all you need to do is call the plugin inside a $(document).ready function:**
+
 ```js
-$('#example1').timeliny();
+$(function() {
+	$('#example1').timeliny();
+});
+```
+
+**A more complex initialization with all options set could look like this:**
+
+```js
+$(function() {
+	$('#example1').timeliny({
+		order: 'asc',
+		className: 'timeliny',
+		wrapper: '<div class="timeliny-wrapper"></div>',
+		boundaries: 2,
+		animationSpeed: 250,
+		onInit: function() {},
+		onDestroy: function() {},
+		afterLoad: function(currYear) {},
+		onLeave: function(currYear, nextYear) {},
+		afterChange: function(currYear) {},
+		afterResize: function() {}
+	});
+});
 ```
 
 ##Documentation
@@ -33,13 +61,84 @@ $('#example1').timeliny();
 
 ### Options
 
-// TODO
+| Name            | Default                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|-----------------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| order           | `asc`                                    | Specifies that the results should be returned in ascending order. For returning the results in a descending order, set the option to `desc`.                                                                                                       |
+| className       | `timeliny`                               | Specifies the CSS class name to use for the instanciated element. If you change this option, you will also need to change the default class name in the Css.                                                                                       |
+| wrapper         | `<div class="timeliny-wrapper"></div>`   | Specifies the structure of the main wrapper element. Useful if you use a grid system. Example with Foundation grid: `<div class="row"><div class="small-12 columns"></div></div>`.                                                                 |
+| boundaries      | `2`                                      | Specifies the amount of 'ghost' dots/years to add on both sides of your timeline. For example, if your timeline contain years from 2002 to 2005 and boundaries is set to `2`, timeliny will transform your timeline from 2000 to 2007.             |
+| animationSpeed  | `250`                                    | Specifies the animation speed for transition from one date to another one.                                                                                                                                                                         |
 
-### Callback Events
+### Callbacks
 
-// TODO
+**onInit ()**
 
-### Public Methods
+Callback fired once, during the plugin initialization.
+
+```js
+onInit: function() {
+	// Your code here.
+},
+```
+
+**afterLoad (currYear)**
+
+Callback fired once, after the plugin has been fully loaded. Parameters:
+
+- currYear: Current active year.
+
+```js
+afterLoad: function(currYear) {
+	// Your code here.
+},
+```
+
+**onLeave (currYear, nextYear)**
+
+Callback fired before the user leaves a particular time to go to another. Parameters:
+
+- currYear: Current active year.
+- nextYear: Year of the destination.
+
+```js
+onLeave: function(currYear, nextYear) {
+	// Your code here.
+},
+```
+
+**afterChange (currYear)**
+
+Callback fired after the user changed from a particular time to another. Parameters:
+
+- currYear: New current active year.
+
+```js
+afterChange: function(currYear) {
+	// Your code here.
+},
+```
+
+**afterResize ()**
+
+Callback fired when the user resize its browser.
+
+```js
+afterResize: function() {
+	// Your code here.
+},
+```
+
+**onDestroy ()**
+
+Callback fired once, during the plugin destruction.
+
+```js
+onDestroy: function() {
+	// Your code here.
+},
+```
+
+### Methods
 
 // TODO
 
