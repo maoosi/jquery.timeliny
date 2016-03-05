@@ -1,6 +1,8 @@
 #Timeliny
 -----------
+
 Timeliny is a responsive jQuery plugin for creating year-based interactive timelines.
+
 What you are looking for is in the `/dist/` folder.
 
 #### Dependencies
@@ -10,10 +12,21 @@ It expects jQuery 2.x to work: https://github.com/jquery/jquery
 Recent browsers such as :
 IE 10+, Opera, Safari, Firefox & Chrome.
 
+
 ##Installation
 -----------
-// TODO
 
+**Including files:**
+
+The following example includes files located into the dist folder. We recommend to use the minified version.
+
+```html
+<!-- Before closing your <head> tag -->
+<link rel="stylesheet" type="text/css" href="jquery.timeliny.min.css" />
+
+<!-- Before closing your <body> tag -->
+<script src="jquery.timeliny.min.js"></script>
+```
 
 ##Usage
 -----------
@@ -55,6 +68,7 @@ $(function() {
 	});
 });
 ```
+
 
 ##Documentation
 -----------
@@ -144,15 +158,9 @@ onDestroy: function() {
 
 ### Sass Settings
 
-If you want to use Sass, simply import the file from `jquery.timeliny.scss` in your project.
-
-You can configure the plugin by editing the settings at the top of the file.
+If you want to use Sass, simply import the file from `src/jquery.timeliny.scss` in your project. You can quickly customize the plugin by editing the settings at the top of the file.
 
 ```css
-/**
- * Settings
-**/
-
 $timeliny_classname: 'timeliny';
 
 $timeliny_base-color: #ddd;
@@ -173,5 +181,7 @@ $timeliny_small-breakdown: 768px;
 
 ##Contributing
 -----------
+
 Feel free to contribute by forking then making a pull request.
+
 Edit files in the `/src/` folder,  run `gulp` to copy/minify into the `/dist/` folder and to watch for changes.
