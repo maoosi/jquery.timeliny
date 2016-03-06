@@ -5,6 +5,8 @@ Timeliny is a responsive jQuery plugin for creating year-based interactive timel
 
 What you are looking for is in the `/dist/` folder.
 
+-----------
+
 #### Demo
 [See demo page](https://maoosi.github.io/jquery.timeliny).
 
@@ -15,6 +17,7 @@ It expects jQuery 2.x to work: https://github.com/jquery/jquery
 Recent browsers such as :
 IE 10+, Opera, Safari, Firefox & Chrome.
 
+-----------
 
 ##Installation
 -----------
@@ -205,6 +208,7 @@ Edit files in the `/src/` folder,  run `gulp` to copy/minify into the `/dist/` f
 
 
 ##License
+-----------
 
 Code released under the [MIT license](https://github.com/maoosi/jquery.timeliny/blob/master/LICENSE.md).
 
