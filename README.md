@@ -3,7 +3,7 @@
 
 Timeliny is a responsive jQuery plugin for creating year-based interactive timelines.
 
-What you are looking for is in the `/dist/` folder.
+[See demo page](https://maoosi.github.io/jquery.timeliny).
 
 #### Dependencies
 It expects jQuery 2.x to work: https://github.com/jquery/jquery
