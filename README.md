@@ -199,3 +199,10 @@ $timeliny_small-breakdown: 768px;
 Feel free to contribute by forking then making a pull request.
 
 Edit files in the `/src/` folder,  run `gulp` to copy/minify into the `/dist/` folder and to watch for changes.
+
+
+##License
+
+Code released under the [MIT license](https://github.com/maoosi/jquery.timeliny/blob/master/LICENSE.md).
+
+Copyright (c) 2016 Sylvain Simao
