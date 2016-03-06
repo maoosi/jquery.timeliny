@@ -101,7 +101,7 @@
 		 * @private
 		 */
 		function _createWrapper() {
-			return $el.children().wrapAll( options.wrapper).wrapAll( '<div class="' + options.className + '-timeline"></div>' );
+			return $el.addClass(options.className).children().wrapAll( options.wrapper).wrapAll( '<div class="' + options.className + '-timeline"></div>' );
 		}
 
 		/**
@@ -241,7 +241,7 @@
 			function _stop_move() {
 				if (selected) {
 					// active the closest elem
-					var linePos = $el.find('.' + options.className + '-vertical-line').position().left;
+					var linePos = $el.find('.' + options.className + '-vertical-line').offset().left;
 					var closestDotYear = null;
 					var diff = 99999999999999999999999;
 
@@ -250,6 +250,7 @@
 						var currDiff = Math.abs(currDotPos - linePos);
 
 						if (currDiff < diff) {
+							console.log($(this).attr('data-year'));
 							closestDotYear = $(this).attr('data-year');
 							diff = currDiff;
 						}

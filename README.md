@@ -154,7 +154,21 @@ onDestroy: function() {
 
 ### Methods
 
-// TODO
+**goToYear (year)**
+
+Change the current active year to the year given as first parameter.
+
+```js
+$('#example1').timeliny('goToYear', '2010');
+```
+
+**destroy ()**
+
+Destroy the plugin instance and remove the element from the DOM.
+
+```js
+$('#example1').timeliny('destroy');
+```
 
 ### Sass Settings
 
