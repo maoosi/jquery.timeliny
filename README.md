@@ -19,7 +19,7 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 ##Installation
 -----------
 
-**Using CDN:**
+**jsDelivr CDN:**
 
 ```html
 <!-- Before closing your <head> tag -->
@@ -32,7 +32,7 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 **Using NPM:**
 
 ```bash
-npm install jquery.timeliny
+$ npm install jquery.timeliny
 ```
 
 **Including files:**
