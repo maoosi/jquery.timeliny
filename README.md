@@ -19,6 +19,16 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 ##Installation
 -----------
 
+**Using CDN:**
+
+```html
+<!-- Before closing your <head> tag -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.timeliny/1.0.0/jquery.timeliny.min.css" />
+
+<!-- Before closing your <body> tag -->
+<script src="https://cdn.jsdelivr.net/jquery.timeliny/1.0.0/jquery.timeliny.min.js"></script>
+```
+
 **Using NPM:**
 
 ```bash
@@ -31,7 +41,7 @@ The following example includes files located into the dist folder. Using the min
 
 ```html
 <!-- Before closing your <head> tag -->
-<link rel="stylesheet" type="text/css" href="jquery.timeliny.min.css" />
+<link rel="stylesheet" href="jquery.timeliny.min.css" />
 
 <!-- Before closing your <body> tag -->
 <script src="jquery.timeliny.min.js"></script>
