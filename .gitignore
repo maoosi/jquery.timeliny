@@ -5,7 +5,7 @@
 .DS_Store
 
 # NODE
-node_modules/*
+node_modules
 
 # SASS
 .sass-cache

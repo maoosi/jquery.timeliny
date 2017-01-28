@@ -23,10 +23,10 @@ IE 10+, Opera, Safari, Firefox & Chrome.
 
 ```html
 <!-- Before closing your <head> tag -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.timeliny/1.0.0/jquery.timeliny.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.timeliny/1.0.1/jquery.timeliny.min.css" />
 
 <!-- Before closing your <body> tag -->
-<script src="https://cdn.jsdelivr.net/jquery.timeliny/1.0.0/jquery.timeliny.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.timeliny/1.0.1/jquery.timeliny.min.js"></script>
 ```
 
 **Using NPM:**
@@ -78,6 +78,7 @@ $(function() {
 		wrapper: '<div class="timeliny-wrapper"></div>',
 		boundaries: 2,
 		animationSpeed: 250,
+        hideBlankYears: false,
 		onInit: function() {},
 		onDestroy: function() {},
 		afterLoad: function(currYear) {},
@@ -101,6 +102,7 @@ $(function() {
 | wrapper         | `<div class="timeliny-wrapper"></div>`   | Specifies the structure of the main wrapper element. Useful if you use a grid system. Example with Foundation grid: `<div class="row"><div class="small-12 columns"></div></div>`.                                                                 |
 | boundaries      | `2`                                      | Specifies the amount of 'ghost' dots/years to add on both sides of your timeline. For example, if your timeline contain years from 2002 to 2005 and boundaries is set to `2`, timeliny will transform your timeline from 2000 to 2007.             |
 | animationSpeed  | `250`                                    | Specifies the animation speed for transition from one date to another one.                                                                                                                                                                         |
+| hideBlankYears  | `false`                                    | If set to `true`, it will only show years that have a data-year attribute.                                                                                                                                                                         |
 
 ### Callbacks
 
@@ -225,4 +227,4 @@ Edit files in the `/src/` folder,  run `gulp` to copy/minify into the `/dist/` f
 
 Code released under the [MIT license](https://github.com/maoosi/jquery.timeliny/blob/master/LICENSE.md).
 
-Copyright (c) 2016 Sylvain Simao
+Copyright (c) 2017 Sylvain Simao

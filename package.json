@@ -1,6 +1,6 @@
 {
 	"name": "jquery.timeliny",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Responsive jQuery plugin for creating year-based interactive timelines.",
 	"homepage": "https://github.com/maoosi/jquery.timeliny",
 	"main": "dist/jquery.timeliny.min.js",

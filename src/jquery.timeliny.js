@@ -3,7 +3,9 @@
  * Author: Sylvain Simao - https://github.com/maoosi
  */
 
-;(function($) {
+;(function ( $, window, document, undefined ) {
+
+    "use strict";
 
 	/**
 	 * Plugin object constructor.
@@ -26,7 +28,9 @@
 			hook('onInit');
 
 			_reorderElems();
-			_addGhostElems();
+			if (options.hideBlankYears === false) {
+                _addGhostElems();
+            }
 			_createWrapper();
 			_createDots();
 			_fixBlockSizes();
@@ -350,6 +354,7 @@
 	 * Plugin definition.
 	 */
 	$.fn['timeliny'] = function(options) {
+        console.log(options);
 		// If the first parameter is a string, treat this as a call to
 		// a public method.
 		if (typeof arguments[0] === 'string') {
@@ -398,6 +403,7 @@
 		wrapper: '<div class="timeliny-wrapper"></div>',
 		boundaries: 2,
 		animationSpeed: 250,
+        hideBlankYears: false,
 		onInit: function() {},
 		onDestroy: function() {},
 		afterLoad: function(currYear) {},
@@ -406,4 +412,4 @@
 		afterResize: function() {}
 	};
 
-})(jQuery);
+})( jQuery, window, document );
