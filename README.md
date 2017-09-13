@@ -1,4 +1,4 @@
-#Timeliny
+# Timeliny
 -----------
 
 Timeliny is a responsive jQuery plugin for creating year-based interactive timelines.
@@ -16,7 +16,7 @@ Recent browsers such as :
 IE 10+, Opera, Safari, Firefox & Chrome.
 
 
-##Installation
+## Installation
 -----------
 
 **jsDelivr CDN:**
@@ -47,7 +47,7 @@ The following example includes files located into the dist folder. Using the min
 <script src="jquery.timeliny.min.js"></script>
 ```
 
-##Usage
+## Usage
 -----------
 
 **Create the basic html structure required. Don't forget `data-year` and to set an `active` element:**
@@ -90,7 +90,7 @@ $(function() {
 ```
 
 
-##Documentation
+## Documentation
 -----------
 
 ### Options
@@ -214,7 +214,7 @@ $timeliny_small-breakdown: 768px;
 ```
 
 
-##Contributing
+## Contributing
 -----------
 
 Feel free to contribute by forking then making a pull request.
@@ -222,7 +222,7 @@ Feel free to contribute by forking then making a pull request.
 Edit files in the `/src/` folder,  run `gulp` to copy/minify into the `/dist/` folder and to watch for changes.
 
 
-##License
+## License
 -----------
 
 Code released under the [MIT license](https://github.com/maoosi/jquery.timeliny/blob/master/LICENSE.md).
