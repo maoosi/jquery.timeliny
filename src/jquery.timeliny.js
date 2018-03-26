@@ -35,6 +35,7 @@
 			_createDots();
 			_fixBlockSizes();
 			_clickBehavior();
+      _arrowBehavior();
 			_createVerticalLine();
 			_updateTimelinePos();
 			_resizeBehavior();
@@ -194,6 +195,26 @@
 
 				return false;
 			});
+		}
+
+    function _arrowBehavior() {
+      $('html').keydown(function(e){
+
+       if(e.which == 39){
+         var years = $(this).find('.' + options.className + '-timeblock:not(.inactive) .' + options.className + '-dot');
+         var currYear =$(years).parent().parent().find('.' + options.className + '-timeblock.active').attr('data-year');
+         var nextYear = Number(currYear) + 1;
+         goToYear(String(nextYear));
+       }
+       else if (e.which == 37){
+         var years = $(this).find('.' + options.className + '-timeblock:not(.inactive) .' + options.className + '-dot');
+         var currYear =$(years).parent().parent().find('.' + options.className + '-timeblock.active').attr('data-year');
+         var nextYear = Number(currYear) - 1;
+         goToYear(String(nextYear));
+       }
+
+
+      });
 		}
 
 		/**
